@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingTop="@dimen/maintab_padding"
+    android:paddingBottom="@dimen/maintab_padding"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgMineIcon"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/main_tab_me_selector"/>
+
+        <ImageView
+            android:id="@+id/imgVersionCheck_bottom"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="-3dp"
+            android:layout_toRightOf="@+id/imgMineIcon"
+            android:background="@drawable/red_point" />
+    </RelativeLayout>
+    <TextView
+
+        android:id="@+id/tabText"
+        style="@style/TabText"
+
+        />
+
+
+</LinearLayout>

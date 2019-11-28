@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="maintab_padding">3dp</dimen>
+    <dimen name="action_bar_height">45dp</dimen>
+    <dimen name="item_marginTop_tall">5dp</dimen>
+    <dimen name="item_marginTop_short">1dp</dimen>
+    <dimen name="room_status_cell_length">56dp</dimen>
+    <dimen name="pane_line">0.8dp</dimen>
+    <dimen name="crm_swipe_item_radius">3dp</dimen>
+    <dimen name="crm_swipe_item_size">65dp</dimen>
+
+    <dimen name="card_height">150dp</dimen>
+
+    <dimen name="item_margin_top">10dp</dimen>
+</resources>

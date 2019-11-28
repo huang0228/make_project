@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'bugly'
+
+
+// 当前beta版本号
+ext.build_number = "beta1";
+
+// 显示的时间格式，形如20171110
+def releaseTime() {
+    return new Date().format("yyMMdd", TimeZone.getDefault());
+}
+
+android {
+
+    //配置自定义打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            if (variant.buildType.name.equals('release')) {
+                fileName = "MyDemoAndroid_${variant.mergedFlavor.versionName}_Build${releaseTime()}_TEST.apk"
+            } else if (variant.buildType.name.equals('debug')) {
+                fileName = "MyDemoAndroid_${variant.mergedFlavor.versionName}_Build${releaseTime()}_DEBUG.apk"
+            }
+            outputFileName = fileName;
+        }
+    }
+
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+
+    def keystoreFilepath = ''
+    def keystorePSW = ''
+    def keystoreAlias = ''
+    def keyPSW = ''
+
+    // default keystore file, PLZ config file path in local.properties
+    def keyfile = file('s.keystore.temp')
+
+
+    Properties properties = new Properties()
+    // local.properties file in the root director
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    keystoreFilepath = properties.getProperty("keystore")
+
+    if (keystoreFilepath) {
+        keystorePSW = properties.getProperty("storepassword")
+        keystoreAlias = properties.getProperty("keyalias")
+        keyPSW = properties.getProperty("keypassword")
+        keyfile = file(keystoreFilepath)
+
+    }
+
+
+
+    signingConfigs {
+        key {
+            keyAlias keystoreAlias
+            keyPassword keyPSW
+            storeFile keyfile
+            storePassword keystorePSW
+        }
+    }
+    defaultConfig {
+        applicationId "com.sam.demo"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 100
+        versionName "v1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+        multiDexEnabled true
+        //显示声明支持注解
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    /**
+     * 打包时报错
+     */
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+//            signingConfig signingConfigs.key
+
+
+        }
+        debug {
+            //启用代码混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            /*signingConfig signingConfigs.key*/
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:common:2.1.0'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    //PushSDK
+    implementation 'com.umeng.umsdk:push:6.0.1'
+    //华为Push通道
+    implementation 'com.umeng.umsdk:huawei-basetb:2.6.3.305'
+    implementation 'com.umeng.umsdk:huawei-pushtb:2.6.3.305'
+    implementation 'com.umeng.umsdk:huawei-umengaccs:1.2.1'
+    //小米Push通道
+    implementation 'com.umeng.umsdk:xiaomi-push:3.6.17'
+    implementation 'com.umeng.umsdk:xiaomi-umengaccs:1.1.0'
+    implementation 'com.google.android:flexbox:0.2.3'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.+'
+    implementation 'com.android.support:cardview-v7:27.+'
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:support-v4:27.+'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.github.dkzwm.SmoothRefreshLayout:core:1.6.3.3'
+    implementation 'com.github.dkzwm.SmoothRefreshLayout:ext-two-level:1.6.3.3'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':library_photoview')
+    implementation project(':calendarview')
+    implementation 'com.alibaba:fastjson:1.1.56.android'
+    implementation 'com.tencent.bugly:crashreport:2.6.6'
+    implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
+    implementation project(':tabpagerindictor')
+    implementation(name: "library_iosdialog-release", ext: "aar")
+    implementation 'top.zibin:Luban:1.1.3'
+    //小米更新sdk
+    implementation 'mi-appstore:xiaomi-update-sdk:4.0.3'
+    //应用宝自动更新sdk
+    implementation files('libs/tmassistantsdk_selfupdate-jce_3.0.5_78_20181115214920.jar')
+    implementation project(':ShortcutBadger')
+    implementation project(':android-pickers')
+}

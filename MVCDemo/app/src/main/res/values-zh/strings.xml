@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="app_name_water_mark">MyDemo</string>
+    <string name="login">登录</string>
+    <string name="token">token</string>
+    <string name="main_tab_home">首页</string>
+    <string name="main_tab_me">我的</string>
+
+    <string name="two_click_exit">再次点击退出</string>
+    <string name="wrong_pass">用户名账号密码错误</string>
+
+    <string-array name="main_tab">
+        <item>首页</item>
+        <item>消息</item>
+        <item>个人</item>
+    </string-array>
+
+    <string name="progress_dialog_msg">请稍后</string>
+    <string name="name">姓名</string>
+    <string name="user_name">用户名</string>
+    <string name="hint_user_name">请输入用户名</string>
+    <string name="hint_user_pwd">请输入密码</string>
+    <string name="wx_name">微信昵称</string>
+
+    <string name="logout">退出登录</string>
+    <string name="head_sculpture">头像</string>
+    <string name="sys_setting">系统设置</string>
+    <string name="sr_pull_up"></string>
+    <string name="sr_pull_up_to_load">上拉加载</string>
+    <string name="sr_release_to_load">释放加载</string>
+    <string name="sr_pull_down"></string>
+    <string name="sr_pull_down_to_refresh">下拉刷新</string>
+    <string name="sr_release_to_refresh">释放刷新</string>
+    <string name="sr_refreshing">正在更新中…</string>
+    <string name="sr_refresh_complete">更新完成</string>
+    <string name="sr_loading">正在加载中…</string>
+    <string name="sr_load_complete">加载完成</string>
+    <string name="sr_last_update">上次更新:&#160;</string>
+    <string name="sr_seconds_ago">&#160;秒之前</string>
+    <string name="sr_minutes_ago">&#160;分钟之前</string>
+    <string name="sr_hours_ago">&#160;小时之前</string>
+    <string name="sr_refresh_failed">更新失败</string>
+    <string name="sr_load_failed">加载失败</string>
+    <string name="sr_no_more_data">没有更多数据了</string>
+
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="islogout">是否退出登录</string>
+
+    <string name="scan_desc_string">将二维码放入方框扫描</string>
+    <string name="scan_title_string">扫描</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="notifyTitle">提示</string>
+
+    <string name="CAMERA">相机</string>
+    <string name="READ_EXTERNAL_STORAGE">内存</string>
+
+    <string name="tip_type_not_image">选择的不是图片</string>
+    <string name="tip_no_camera">没有相机</string>
+    <string name="tip_tips">提示</string>
+    <string name="tip_tips2">采集异常</string>
+    <string name="tip_compress">正在压缩照片...</string>
+    <string name="tip_compress_failed">"%1$s 图片压缩失败:%2$s picturePath:%3$s"</string>
+    <string name="msg_crop_failed">"有裁切失败的图片"</string>
+    <string name="msg_compress_failed">"有压缩失败的图片"</string>
+    <string name="msg_crop_canceled">" 取消裁切"</string>
+    <string name="msg_operation_canceled">"操作被取消"</string>
+    <string name="tip_permission_camera">没有使用相机的权限，请在权限管理中开启</string>
+    <string name="tip_permission_storage">没有使用SD卡的权限，请在权限管理中开启</string>
+    <string name="tip_permission_camera_storage">没有使用相机和SD卡的权限，请在权限管理中开启</string>
+
+    <!--custom multipleimageselect -->
+    <string name="album_view">选择图片</string>
+    <string name="image_view">单击选择</string>
+
+    <string name="add">确定</string>
+    <string name="selected">已选</string>
+    <string name="limit_exceeded">最多能选 %d 张</string>
+
+    <string name="toast_finger_dialog_title">提示</string>
+    <string name="toast_finger_dialog_content">是否开启指纹功能</string>
+    <string name="toast_finger_dialog_cancel">暂不开启</string>
+    <string name="toast_finger_dialog_confirm">开启</string>
+    <string name="toast_finger_error">指纹验证失败</string>
+    <string name="toast_finger_unsupport">设备不支持指纹功能</string>
+    <string name="toast_finger_success">指纹验证成功</string>
+    <string name="toast_finger_input">请验证指纹</string>
+    <string name="toast_finger_open">开启指纹验证</string>
+    <string name="toast_finger_decrypt">解密异常</string>
+    <string name="toast_finger_change">指纹信息发生变化,功能已关闭,请密码登录</string>
+    <string name="toast_finger_click_unlock">点击进行指纹解锁</string>
+    <string name="action_login_by_pwd">密码登录</string>
+    <string name="bg_run_label">后台运行时长</string>
+    <string name="hint_search_customer">请输入搜索内容</string>
+    <string name="toast_check_error">日期格式错误</string>
+
+    <string name="bg_run_time_1">5分钟</string>
+    <string name="bg_run_time_2">10分钟</string>
+    <string name="bg_run_time_3">15分钟</string>
+
+    <string name="pwd_modify_already">密码已修改，请重新登录</string>
+    <string name="user_locked_or_del">用户被锁定或删除，请重新登录</string>
+    <string name="user_device_unlock">用户已解绑，请重新登录</string>
+
+    <string name="net_connection_error">网络无连接，请检查网络</string>
+    <string name="user_info_title">用户信息</string>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rlItemReport"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_item_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5a5e5d"
+            android:layout_marginLeft="18dp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/imgItemRight"/>
+        <ImageView
+            android:id="@+id/imgItemRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="8dp"
+            android:visibility="invisible"
+            android:src="@drawable/selected_check"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebedec"></View>
+
+</LinearLayout>

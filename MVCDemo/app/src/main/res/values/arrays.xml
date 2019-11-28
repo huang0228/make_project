@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="customer_manage_search_item">
+        <item>医院名称</item>
+        <item>省份</item>
+        <item>医院等级</item>
+    </string-array>
+    <string-array name="customer_manage_search_item_code">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="sample_qc_rows_title_settled">
+        <item>机构名称</item>
+        <item>设备序列号</item>
+        <item>匹配值</item>
+        <item>质控梯度</item>
+        <item>质控批号</item>
+        <item>指控厂家</item>
+        <item>SD值</item>
+        <item>AV值</item>
+    </string-array>
+    <string-array name="sample_qc_rows_settled_Method">
+        <item>getORGANIZATION_NAME</item>
+        <item>getINSTRUMENT_CODE</item>
+        <item>getMATCH_CHARACTERS</item>
+        <item>getQC_GRADS_NAME</item>
+        <item>getQC_BATCHNO</item>
+        <item>getQC_FACTORY</item>
+        <item>getQC_SD</item>
+        <item>getQC_AV</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F5">
+   <TextView
+       android:id="@+id/tv_view"
+       android:background="#33000000"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/action_bar_height"
+       android:focusable="true"
+       android:focusableInTouchMode="true"
+       android:background="@color/white">
+
+      <LinearLayout
+          android:id="@+id/li_notify_bar_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:gravity="center">
+         <TextView
+             android:id="@+id/tv_notify_title"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/actionbar_text"
+             android:textSize="18sp"
+             android:layout_marginRight="5dp"
+             android:singleLine="true"
+             android:text="所有类型"/>
+         <ImageView
+             android:id="@+id/imgNotifyArrow"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/navigation_down"/>
+      </LinearLayout>
+
+      <ImageView
+          android:visibility="visible"
+          android:layout_marginRight="10dp"
+          android:padding="13dp"
+          android:id="@+id/imgNotifySearch"
+          android:src="@drawable/screen_search"
+          android:layout_width="@dimen/action_bar_height"
+          android:layout_height="@dimen/action_bar_height"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"/>
+      <View
+          android:id="@+id/viewBottomLine"
+          android:layout_alignParentBottom="true"
+          android:layout_width="match_parent"
+          android:background="#F1F6F5"
+          android:layout_height="1dp"
+          />
+   </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:orientation="horizontal"
+       android:background="@color/white">
+
+      <LinearLayout
+          android:id="@+id/liAllMsg"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="center">
+         <TextView
+             android:id="@+id/tvAllMsg"
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:textSize="16sp"
+             android:textColor="@color/btnCheck"
+             android:text="全部"></TextView>
+         <View
+             android:id="@+id/ViewAllMsg"
+             android:layout_width="21dp"
+             android:layout_height="1dp"
+             android:background="@color/btnCheck"></View>
+      </LinearLayout>
+       <LinearLayout
+           android:id="@+id/liUnReadMsg"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:gravity="center">
+           <TextView
+               android:id="@+id/tvUnReadMsg"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:textSize="16sp"
+               android:textColor="@color/text_dark2"
+               android:text="未读"></TextView>
+           <View
+               android:id="@+id/ViewUnReadMsg"
+               android:layout_width="21dp"
+               android:layout_height="1dp"
+               android:background="@color/btnCheck"
+               android:visibility="invisible"></View>
+       </LinearLayout>
+       <LinearLayout
+           android:id="@+id/liReadMsg"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:gravity="center">
+           <TextView
+               android:id="@+id/tvReadMsg"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:textSize="16sp"
+               android:textColor="@color/text_dark2"
+               android:text="已读"></TextView>
+           <View
+               android:id="@+id/ViewReadMsg"
+               android:layout_width="21dp"
+               android:layout_height="1dp"
+               android:background="@color/btnCheck"
+               android:visibility="invisible"></View>
+       </LinearLayout>
+   </LinearLayout>
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="5dp"
+       android:background="@drawable/bg_home_block_line"></View>
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <me.dkzwm.widget.srl.SmoothRefreshLayout
+          android:id="@+id/refresh_layout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+         <android.support.v7.widget.RecyclerView
+             android:id="@+id/id_recyclerView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:overScrollMode="never" />
+
+
+      </me.dkzwm.widget.srl.SmoothRefreshLayout>
+
+      <RelativeLayout
+          android:id="@+id/rel_nodata"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/white"
+          android:visibility="gone">
+
+         <ImageView
+             android:id="@+id/iv_no_data"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:src="@mipmap/ic_no_data" />
+      </RelativeLayout>
+
+   </FrameLayout>
+
+
+</LinearLayout>

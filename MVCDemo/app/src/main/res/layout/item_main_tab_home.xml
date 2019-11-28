@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingTop="@dimen/maintab_padding"
+    android:paddingBottom="@dimen/maintab_padding"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/main_tab_home_selector"/>
+
+    <TextView
+
+        android:id="@+id/tabText"
+        style="@style/TabText"
+
+        />
+
+
+</LinearLayout>

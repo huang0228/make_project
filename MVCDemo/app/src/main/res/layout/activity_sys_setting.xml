@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f1f3f2">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_home_block_line"/>
+    <LinearLayout android:id="@+id/li_finger_turn"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        style="@style/about_us_item">
+
+        <TextView
+           android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_5a5e5d"
+            android:textSize="15sp"
+            android:text="@string/toast_finger_open" />
+
+        <Switch android:id="@+id/switchFingerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/switch_custom_selector"
+            android:track="@drawable/switch_custom_track_selector"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/li_bg_run"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/white"
+        style="@style/about_us_item">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_5a5e5d"
+            android:textSize="15sp"
+            android:text="@string/bg_run_label" />
+
+        <TextView
+            android:id="@+id/tvBgRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="#323b39"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

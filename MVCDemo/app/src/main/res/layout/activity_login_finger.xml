@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_home_block_line"/>
+
+    <ImageView
+        android:id="@+id/imgUserHeader"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_img_border_white"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_contacts_default" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_5a5e5d"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/li_finger_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="54dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="60dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/finger_print"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_5a5e5d"
+            android:textSize="15sp"
+            android:text="@string/toast_finger_click_unlock"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvLoginByPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#888e8d"
+        android:textSize="13sp"
+        android:text="@string/action_login_by_pwd"/>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorActionba"
+    android:id="@+id/rv_action">
+
+    <ImageView
+    android:onClick="finishActivity"
+    android:id="@+id/iv_actionbar_return"
+    android:layout_width="@dimen/action_bar_height"
+    android:layout_height="@dimen/action_bar_height"
+    android:padding="14dp"
+    android:src="@drawable/ic_arrow_left" />
+
+    <TextView
+
+        android:id="@+id/tv_actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/actionbar_text"
+        android:textSize="18sp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:visibility="gone"
+        android:maxLines="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:id="@+id/title_action"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:padding="13dp"
+        android:id="@+id/iv_action"
+        android:src="@drawable/ic_screen"
+        android:layout_width="@dimen/action_bar_height"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark_line"
+        android:layout_height="0.5dp"
+        />
+
+
+</RelativeLayout>

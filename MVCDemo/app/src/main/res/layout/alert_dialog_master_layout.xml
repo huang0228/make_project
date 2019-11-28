@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alert_dialog_radius_style"
+    android:gravity="center"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:id="@+id/li_alert_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_left_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左视图"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_797979"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_center_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间视图"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_797979"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/li_alert_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tv_alert_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是弹框显示内容"
+            android:textColor="#a9a9a9"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_alert_contentChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是弹框显示内容"
+            android:textColor="@color/color_fd4949"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_alert_footer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btn_alert_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="#a9a9a9"
+            android:textSize="15sp"
+            android:background="@null"/>
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:background="#efefef"/>
+        <Button
+            android:id="@+id/btn_alert_conform"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textSize="15sp"
+            android:textColor="@color/colorAccent"
+            android:background="@null"/>
+    </LinearLayout>
+
+
+</LinearLayout>
